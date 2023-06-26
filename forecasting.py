@@ -46,12 +46,5 @@ def forecasting(city, api_key, Latitude, Longitude):
             table = tabulate(table, tablefmt="grid", colalign=("center" for i in range(11)))
             print(table)
 
-        s2 = '\x1B[1m' + 'Forecasted AQI Report:' + '\x1B[0m'
-        print(f"\n{s2}", '\n')
-
-        from aqi import forecastedAQI
-        x_aqi = forecastedAQI(Latitude, Longitude, city, api_key)
-        y_gas = x_aqi[0]
-        z_time = x_aqi[1]
         from graph import graph
-        graph(avgTemperature, humidity, precipitation, timestamp, y_gas, z_time)
+        graph(avgTemperature, humidity, precipitation, timestamp)

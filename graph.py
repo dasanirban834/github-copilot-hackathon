@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import datetime
 
-def graph(avgTemperature, humidity, precipitation, timestamp, y_gas, z_time):
+def graph(avgTemperature, humidity, precipitation, timestamp):
         fig = plt.figure(figsize=(12.8, 5.5), facecolor='mediumpurple', edgecolor='black')
         ax = plt.axes()
         ax.set_facecolor('lavender')
@@ -25,11 +25,5 @@ def graph(avgTemperature, humidity, precipitation, timestamp, y_gas, z_time):
         plt.plot(xpoints3, ypoints3, 'o-g', linewidth=0.5)
         plt.legend(["Temperature", "Humidity", "Precipitation"])
         plt.title("Forecasted Temperature, Humidity and Precipitation vs. Timestamp Graph", color='black', fontdict={'fontsize': 10})
-
-        # plt.subplot(2, 1, 2)
-        # ypoints4 = np.array(y_gas)
-        # xpoints4 = np.array(z_time)
-        # plt.plot(xpoints4, ypoints4, 'o-b', linewidth=0.5)
-        # plt.ylim(0, 100)
 
         plt.show()
